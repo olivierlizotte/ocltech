@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<style>
+@font-face
+{
+font-family: magnetoFont;
+src: url('magneto.ttf'),
+     url('magneto.eot'); /* IE9 */
+}
+@font-face
+{
+font-family: aeroFont;
+src: url('aero.ttf'),
+     url('aero.eot'); /* IE9 */
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>OCL Technologies</title>
+<meta name="keywords" content="bioinformatic, bigdata, software, algorithm, consultant, longueuil, montreal, quebec, canada" />
+<meta name="description" content="Created by Olivier Caron-Lizotte, OCL Technologies is a software consulting firm that develops BioInformatics tools to extract information and visually represent complex data sets. Incidentally, OCL Technologies stretches its knowledge base to Big Data technologies, graph databases (mostly Neo4j for now), server hardware sizing and data visualization through html5 technologies." />
+<meta name="Googlebot" content="index,nofollow" />
+<meta name="robots" content="index,nofollow" />
+<!-- CSS Files -->
+<link type="text/css" href="style.css" rel="stylesheet" />
+
+<!-- JavaScript -->
+<script type="text/javascript" src="jquery-2.0.3.min.js"></script>
+
+<script type="text/javascript" src="d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="graph.min.js"></script>
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+var OpenedWindow;
+//Pop up window function with site content
+function PopOut(nextFct)
+{
+	if(OpenedWindow)
+	{
+		$("#msg-div").animate({ top: "-602px" }, 200 , function()
+		{
+ 			$(OpenedWindow).hide(0, "linear", nextFct);
+//			OpenedWindow = undefined;
+		});
+	}
+	else
+		nextFct();
+}
+
+function PopUp(theNode)
+{
+	PopOut(function()
+	{
+		var currentWidth = $("#winB-div").width();
+		var winWidth  = 400;
+
+		if(theNode.width)
+			winWidth  = theNode.width;
+
+		var position = currentWidth - winWidth - 10;
+		$("#msg-div").css({left: position + "px", width: winWidth + "px", top:"-602px"});
+
+		OpenedWindow = "#"+theNode.div;
+		$(OpenedWindow).show(0,"linear", function()
+		{
+			$("#msg-div").animate({ top: "2px" }, 800 );
+		});
+	});
+}
+
+//empty callback function. Can be used to know when the message window is hidden
+function callback(){};
+
+//hides currently displayed message window
+function HideWindow()
+{
+	PopOut(callback);
+}
+
+//Function called when a click occured in a circle. The Node param is the Node object.
+function OnNodeClick(node)
+{
+	if(node && node.type && node.div && OpenedWindow != "#"+node.div)
+	{
+		$("#msg-div").clearQueue();
+		PopUp(node);
+	}
+}
+
+//Array containing the objects used to create the Graph
+var dataObject = {nodes:[
+	{name:'OCL Technologies',div:'divOverview',fixed:true,detail:'Consulting firm',IsRoot:true,type:'Html',info:'Overview of the compagny',size:6400, width:460, height:250},
+	{name:'About',div:'divAbout',detail:'this site',type:'Html',info:'',size:1320, height:190},
+	{name:'Domains',div:'divDomain',detail:'Development',type:'Html',info:'',size:4200, height:160},
+	{name:'Hardware',div:'divHardware',detail:'Sizing',type:'Html',info:'',size:1680, height:200},
+	{name:'BioInformatic',div:'divBioInfo',detail:'What we do best',type:'Html',info:'',size:5000, height:130},
+	{name:'Request Quote',div:'divQuote',detail:'Contact',type:'Html',info:'Contact us if you have any question on our services',size:5000, width:440, height:160},
+	{name:'Big Data',div:'divBigData',detail:'',type:'Html',info:'',size:16705, height:130},
+	{name:'Visualization',div:'divDataVisual',detail:'Html5',type:'Html',info:'',size:5800, width:460, height:500},
+	{name:'NoSQL',div:'divGraphDB',detail:'',type:'Html',info:'',size:1580, height:200}
+],links:[
+	{source:0,target:2,name:'>>'},
+	{source:0,target:3,name:'>>'},
+	{source:2,target:4,name:'>>'},
+	{source:2,target:6,name:'>>'},
+	{source:2,target:7,name:'>>>'},
+	{source:0,target:5,name:'?'},
+	{source:2,target:8,name:'>>'}
+]};
+
+//Function called to get first node
+function GetFirstNode()
+{
+	return dataObject.nodes[0];
+}
+
+function isCanvasSupported(){
+  var elem = document.createElement('canvas');
+  return !!(elem.getContext && elem.getContext('2d'));
+}</script>
+
+<div id='winB-div'>
+
+</div>
+
+<div id='graph'></div>
+
+<div id='footer'>Created by <a href="http://www.linkedin.com/pub/olivier-caron-lizotte/2b/393/403/en" target="_blank">Olivier Caronl-Lizotte</a></div>
+<div id='maincontent' class="box-shadow">
+<div id='header'>
+	<svg itemprop="logo" width="220" height="40" xmlns="http://www.w3.org/2000/svg">
+	 <g>
+	  <text xml:space="preserve" font-family="aeroFont" font-size="16" id="svg_1" y="20" x="38" stroke-width="0" stroke="#000000" fill="#000000">Technologies</text>
+	  <g id="svg_2">
+		 <text fill="#000000" stroke="#000000" stroke-width="0" x="25" y="35" id="svg_4" font-size="50" font-family="helvetica, arial, sans-serif" text-anchor="middle" xml:space="preserve">L</text>
+	   <text fill="#000000" stroke="#000000" stroke-width="0" x="20" y="28" id="svg_3" font-size="36" font-family="aeroFont" text-anchor="middle" xml:space="preserve">O</text>
+	  </g>
+	 </g>
+	</svg>
+</div>
+
+<div id='insidemaincontent'>Contractual Research and Consulting Expert Services in Bioinformatic and Big Data Analytics<br>
+Contact : <a href="mailto:info@ocltech.ca" target="_top">info@ocltech.ca</a>
+</div></div>
+
+<div id="msg-div" style="position:absolute; top:-600px;">
+<div class="msg" style="">
+<div id="msgWin" class="win" style="">
+	<div id="divOverview" style="display:none;">
+				<h1 style="font-family:magnetoFont;font-size:20px;">Company overview</h1>
+
+					<blockquote>
+					<p style="text-align: justify;">
+					I founded OCL Technologies in 2008 as a software consulting firm. I am now a full time programmer / bioinformatician for
+					a <a href="http://www.proteomics.iric.ca/" target="_blank">cancer research facility</a>. I love this work. So I decided to spin
+					OCL Technologies into a contractual research company and focus on creating original software tools in the bioinformatics field.
+					</p>
+					<div class="credit" ><small class="author" style="text-align:right;"> - <a href="http://www.linkedin.com/pub/olivier-caron-lizotte/2b/393/403">Olivier Caron-Lizotte</a></small></div>
+					</blockquote>
+					<BR>
+					<p style="text-align: justify;">
+					OCL Technologies specializes in developing data analytic tools with a web front end. The tools we build are interactive, fast and very addictive. <b>Drag the circles to get more information!</b>
+                    </p>
+	</div>
+	<div id="divDomain" style="display:none;">
+				<h1 style="font-family:magnetoFont;font-size:20px;">Domains</h1>
+					<div itemscope itemtype="http://data-vocabulary.org/Organization">
+                        <p style="text-align: justify;">
+                        <span itemprop="description"><span itemprop="name">OCL Technologies</span> develops BioInformatics tools to extract information and visually represent complex data sets.
+					Incidentally, OCL Technologies stretches its knowledge base to include Big Data technologies, graph databases (like Neo4j)
+                            and data visualization through html5 technologies.</span>
+                        </p></div>
+	</div>
+	<div id="divAbout" style="display:none;">
+				<h1 style="font-family:magnetoFont;font-size:20px;">About this site</h1>
+				<p style="text-align: justify;">
+				This web page was designed by&nbsp;<a href="http://www.linkedin.com/pub/olivier-caron-lizotte/2b/393/403" target="_blank"><strong>Olivier Caron-Lizotte</strong></a>. It is powered by html5, D3.js and jQuery. If you have questions or suggestions about the design, feel free to contact <a href="mailto:olivier@ocltech.ca">Olivier</a>.
+				</p>
+				<br>
+				<p style="text-align: center; ">
+					<a href="http://en.wikipedia.org/wiki/HTML5" target="_blank"><img alt="" src="images/html5.png" style="width: 36px; height: 36px; " /></a>&nbsp; <a href="http://jquery.com/" target="_blank"><img alt="http://jquery.com/" src="images/jQuery.png" style="width: 147px; height: 36px; " /></a>&nbsp; <a href="http://d3js.org/" target="_blank"><b style="color: rgb(0, 0, 0); font-family: 'Helvetica Neue', Helvetica, sans-serif; line-height: 24px; font-size: medium; ">D3.js</b></a>
+					</p>
+	</div>
+	<div id="divBigData" style="display:none;">
+				<h1 style="font-family:magnetoFont;font-size:20px;">Big Data Analytics</h1>
+					<p style="text-align: justify;">
+					OCL Technologies can extract meaningful information from very large, complex data sets. If your company is not in bioinformatic,
+					we may still be able to help you. <a href="mailto:info@ocltech.ca">Contact us</a> for more information.
+					</p>
+	</div>
+	<div id="divBioInfo" style="display:none;">
+				<h1 style="font-family:magnetoFont;font-size:20px;">BioInformatics</h1>
+					<p style="text-align: justify;">
+					Tools and software pipeline development, proof of concept products, algorithm design, creative web interfaces ...
+					</p>
+	</div>
+	<div id="divHardware" style="display:none;">
+				<h1 style="font-family:magnetoFont;font-size:20px;">Hardware Sizing</h1>
+					<p style="text-align: justify;">
+					Think you need new infrastructure? Looking for an upgrade? Ask us first!
+					</p>
+					<BR>
+					<p style="text-align: justify;">
+					We can evaluate your needs and make propositions on avenues you should consider. We have no affiliation with
+					hardware companies and are therefore able to provide unbiased suggestions about your options.
+					</p>
+	</div>
+	<div id="divGraphDB" style="display:none;">
+				<h1 style="font-family:magnetoFont;font-size:20px;">Graph databases</h1>
+					<p style="text-align: justify;">
+					SQL databases are not adequate for every aspects of a project. In some situations, a Graph Database can greatly
+					simplify development and limit server stress. NoSQL is not a magical tool, but handled correctly, it can achieve
+					impressive results.
+					</p>
+	</div>
+	<div id="divQuote" style="display:none;">
+				<h1 style="font-family:magnetoFont;font-size:20px;">Contact information</h1>
+					<p style="font-weight:600;font-size:15px;">
+					Longueuil, Quebec, Canada
+					<br>
+					By mail: <a href="mailto:info@ocltech.ca">info@ocltech.ca</a> / <a href="mailto:olivier@ocltech.ca">olivier@ocltech.ca</a>
+					<br>
+					By LinkedIn profile: <a href="http://www.linkedin.com/company/2769022" target="_blank">OCL Technologies</a> / <a href="http://www.linkedin.com/pub/olivier-caron-lizotte/2b/393/403" target="_blank">Olivier Caron-Lizotte</a>
+					<br>
+					On Toptal: <a href="http://www.toptal.com/data-science#technology-is-science">Technology is Science</a>
+					</p>
+	</div>
+	<div id="divDataVisual" style="display:none;">
+				<h1 style="font-family:magnetoFont;font-size:20px;">Data Visualization</h1>
+				<p style="text-align: justify;">
+				OCL Technologies builds creative data representations in html5 through the use of various javascript libraries: D3.js,
+				Raphael.js, Ext JS, Processing.js, Jmol and many others. The tools we build are powerful, dynamic and always original.
+				</p>
+	</div>
+<BR>
+<div id="hideWindow"><span onclick="HideWindow(); return false;"> --- hide --- </span></div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+
+if(isCanvasSupported())
+{
+	//Spawn the graph
+	CreateGraph(dataObject, "graph", OnNodeClick);
+
+	OnNodeClick(GetFirstNode());
+	//Send a nice little message to the user about how to navigate in this site
+	//MessageTop.msg("Navigation", "Click or drag the circles to navigate through the site");
+}
+else
+{
+	alert('Your browser does not support this site, please consider upgrading.');
+	// Let's format the hidden div into an ordinary site upon fallback....
+	document.getElementById('hiddenDiv').style.visibility="visible";
+	document.getElementById('hiddenDiv').style.display="block";
+}
+</script>
+<div id='language'><div id='languageInside' class="box-shadow" onclick="location.href='index_fr.html'" onmouseover="" style="cursor: pointer;">Fran&ccedil;ais</div></div>
+</body>
+
+</html>

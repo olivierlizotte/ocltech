@@ -154,7 +154,7 @@ div#hideWindow {
 }
 
 div#insidemaincontent{
-	margin: 40px 10px 20px 60px;
+	margin: 4px 4px 4px 10px;
   	font-family: "FreeSerif";
   	font-size: 16px; 
 }
@@ -167,7 +167,7 @@ div#maincontent{
   	color: #000; 
     background: #F6F6F6;
     background: rgba(249, 249, 249, 0.9);
-	width:400px;
+	width:250px;
     border-radius: 8px;
     -moz-border-radius: 8px;
 }

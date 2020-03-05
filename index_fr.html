@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -18,8 +19,8 @@ src: url('aero.ttf'),
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>OCL Technologies</title>
-<meta name="keywords" content="bioinformatique, bigdata, logiciel, algorithmie, consultant, longueuil, montreal, quebec, canada" />
-<meta name="description" content="OCL Technologies, firme de consultation [Bioinformatique / Big data analytic] et de recherche contractuelle." />
+<meta name="keywords" content="bioinformatic, bigdata, software, algorithm, consultant, longueuil, montreal, quebec, canada" />
+<meta name="description" content="Created by Olivier Caron-Lizotte." />
 <meta name="Googlebot" content="index,nofollow" />
 <meta name="robots" content="index,nofollow" />
 <!-- CSS Files -->
@@ -94,23 +95,31 @@ function OnNodeClick(node)
 
 //Array containing the objects used to create the Graph
 var dataObject = {nodes:[
-	{name:'OCL Technologies',div:'divOverview',fixed:true,detail:'Recherche contractuelle',IsRoot:true,type:'Html',info:'Survol de la compagnie',size:6400, width:460, height:250},
-	{name:'A propos',div:'divAbout',detail:'de ce site',type:'Html',info:'',size:1320, height:190},
-	{name:'Domaines',div:'divDomain',detail:'Developpement',type:'Html',info:'',size:4200, height:160},
-	{name:'Infonuagique',div:'divHardware',detail:'',type:'Html',info:'',size:2680, height:400},
-	{name:'Bio-Informatique',div:'divBioInfo',detail:'Ce que nous sommes',type:'Html',info:'',size:5000, height:130},
-	{name:'Contact',div:'divQuote',detail:'',type:'Html',info:'Nous contacter',size:5000, width:440, height:160},
-	{name:'Big Data',div:'divBigData',detail:'',type:'Html',info:'',size:16705, height:130},
-	{name:'Visualisation',div:'divDataVisual',detail:'Html5',type:'Html',info:'',size:5800, width:460, height:500},
-	{name:'NoSQL',div:'divGraphDB',detail:'',type:'Html',info:'',size:1580, height:200}
+    {detail:'Olivier',div:'divA',fixed:true,name:'Caron-Lizotte',IsRoot:true,type:'Html',info:'Profile',size:5000, width:460, height:250},
+	{detail:'Explorai',div:'divB',name:'PDG',type:'Html',size:1400, width:480, height:230},
+    {detail:'Groupe Santé',div:'divC',name:'Biron',type:'Html',info:'',size:4320, height:190},
+    {detail:'Biron',div:'divC1',name:'Expert I.A.',type:'Html',info:'',size:2320, height:190},
+    {detail:'Biron',div:'divC2',name:'Directeur des Données',type:'Html',info:'',size:6320, height:190},
+	{detail:'BiogeniQ',div:'divC3',name:'Co-fondateur',type:'Html',info:'',size:5200, height:160},
+	{detail:'IRIC',div:'divD',name:'Bio-informaticien',type:'Html',info:'',size:4280, height:200},
+    {detail:'',div:'divE',name:'...',type:'Html',info:'',size:1000, height:130},
+    {detail:'123 Certification',div:'divE1',name:'Directeur des Opérations',type:'Html',info:'',size:9000, height:30},
+	{detail:'CRIM',div:'divE2',name:'Analyste programmeur',type:'Html',info:'',size:6000, width:440, height:160},
+	{detail:'NOVIKA',div:'divE3',name:'Programmeur',type:'Html',info:'',size:6705, height:130},
+	{detail:'Gradsters',div:'divF',name:'Directeur des Technologies',type:'Html',info:'',size:9600, width:600, height:50},
+	{detail:'Toptal',div:'divG',name:'Consultant',type:'Html',info:'',size:3580, height:200}
 ],links:[
-	{source:0,target:2,name:'>>'},
-	{source:0,target:3,name:'>>'},
-	{source:2,target:4,name:'>>'},
-	{source:2,target:6,name:'>>'},
-	{source:2,target:7,name:'>>>'},
-	{source:0,target:5,name:'?'},
-	{source:2,target:8,name:'>>'}
+	{source:0,target:1,name:'2020'},
+	{source:0,target:2,name:'2015'},
+    {source:2,target:3,name:'2019'},
+    {source:2,target:4,name:'2017'},
+    {source:2,target:5,name:'2015'},
+    {source:0,target:6,name:'2009'},
+    {source:0,target:7,name:'2000'},
+	{source:7,target:8,name:'2004'},
+	{source:7,target:9,name:'2001'},
+	{source:7,target:10,name:'2000'},
+	{source:0,target:11,name:'2015'}
 ]};
 
 //Function called to get first node
@@ -130,107 +139,146 @@ function isCanvasSupported(){
 
 <div id='graph'></div>
 
-<div id='footer'>Cr&eacute;&eacute;e par <a href="http://www.linkedin.com/pub/olivier-caron-lizotte/2b/393/403" target="_blank">Olivier Caronl-Lizotte</a></div>
-
 <div id='maincontent' class="box-shadow">
-<div id='header'>
-	<svg itemprop="logo" width="220" height="80" xmlns="http://www.w3.org/2000/svg">
-	 <g>
-	  <text xml:space="preserve" font-family="aeroFont" font-size="16" id="svg_1" y="20" x="38" stroke-width="0" stroke="#000000" fill="#000000">Technologies</text>
-	  <g id="svg_2">
-		 <text fill="#000000" stroke="#000000" stroke-width="0" x="25" y="35" id="svg_4" font-size="50" font-family="helvetica, arial, sans-serif" text-anchor="middle" xml:space="preserve">L</text>
-	   <text fill="#000000" stroke="#000000" stroke-width="0" x="20" y="28" id="svg_3" font-size="36" font-family="aeroFont" text-anchor="middle" xml:space="preserve">O</text>
-	  </g>
-	 </g>
-	</svg>
-</div>
-<div id='insidemaincontent'>
-Recherche Contractuelle et Services de Consultation<br>
-Contact : <a href="mailto:info@ocltech.ca" target="_top">info@ocltech.ca</a>
-</div></div>
+	<div id='header'>	</div>
 
+	<div id='insidemaincontent'>
+		<h1 style="font-family:magnetoFont;font-size:18px;">Olivier Caron-Lizotte</h1>
+		<p style="font-size:12px;"><b>CDO, CTO, Expert AI + BI</b></p>
+		<p style="font-size:12px;"> <a href="https://www.linkedin.com/in/ocltech/">LinkedIn</a> - <a href="https://twitter.com/ocltech">Twitter</a></p>
+	</div>
+</div>
 
 <div id="msg-div" style="position:absolute; top:-600px;">
 <div class="msg" style="">
 <div id="msgWin" class="win" style="">
-	<div id="divOverview" style="display:none;">
-				<h1 style="font-family:magnetoFont;font-size:20px;">Aper&ccedil;u</h1>
+	<div id="divA" style="display:none;">
+				<h1 style="font-family:magnetoFont;font-size:20px;">Survol du profile</h1>
 
-					<blockquote>
-					<p style="text-align: justify;">Fond&eacute; en 2008 comme firme de consultation en d&eacute;veloppement logiciel, OCL Technologies se spécialise désormais dans trois branches, l'architecture d'entreprise, la bio-informatique et et la valorisation des données.</p>
-					<div class="credit" ><small class="author" style="text-align:right;"> - <a href="http://www.linkedin.com/pub/olivier-caron-lizotte/2b/393/403">Olivier Caron-Lizotte</a></small></div>
-					</blockquote>
-					<BR>
+					
 					<p style="text-align: justify;">
-					<b>D&eacute;placez les cercles pour avoir plus d'information!</b></p>
-	</div>
-	<div id="divDomain" style="display:none;">
-				<h1 style="font-family:magnetoFont;font-size:20px;">Domaines</h1>
+						• 20 ans dans le domaine de l'informatique : directeur (opérations, TI), gestion d'équipe, développement de produits et services, architecture et administration de systèmes (full-stack), sécurité, chiffrement, intelligence d’affaire et apprentissage machine<BR />
+• 6 ans en bio-informatique<BR />
+• 10 publications (Nature, Cell, Leukemia, MCP ...)<BR />
+• M.Sc. recherche en Informatique<BR />
+• Recherche opérationnelle, optimisation de systèmes, intelligence artificielle<BR />
+• Recherche industrielle et académique<BR />
+• Suivi et gestion de projets concurrents, méthodologies Agiles, "Zero Bug Policy"<BR />
+• Parfaitement bilingue à l’écrit et à l’oral (anglais, français)<BR />
+<BR />
+• Environnements: Amazon, Apache, Azure, Cloudflare, Git (GitHub), Google Cloud, Heroku, JBoss, Linux (CentOS, Ubuntu, Gentoo), MongoDB (Mongoose, GridFS), Neo4J (Cypher), NGINX, OSX, PowerBI, scikit-learn, SQL (PostgreSQL, MariaDB, MySQL, MS SQL), Tensorflow, Tomcat, Windows (.Net)<BR />
+<BR />
+• Langages: Assembleur (X386, SPARC), C, C++, C#, Cobol, CSS3, CUDA, FoxPro, HTML5, Java, Javascript (NodeJS, ExpressJS, D3.js, jQuery, Tensorflow JS), LISP, OpenGL (OpenSL, OpenAL, WebGL), Pascal, PHP, Python<BR />
+					</p>
+					<div class="credit" ><small class="author" style="text-align:right;"> - <a href="https://www.linkedin.com/pub/olivier-caron-lizotte/2b/393/403">Olivier Caron-Lizotte</a></small></div>
 
-					<div itemscope itemtype="http://data-vocabulary.org/Organization">
-                        <p style="text-align: justify;">
-                        <span itemprop="description">
-                            <span itemprop="name">OCL Technologies</span>
-                            d&eacute;veloppe des outils bio-informatiques qui repr&eacute;sentent de mani&egrave;re conviviale de l'information extraite de jeux de donn&eacute;es complexes. Incidemment, OCL Technologies gravite autour des technologies du mouvement "Big Data", des bases de donn&eacute;es de type graphe (NoSQL, comme Neo4j) et des outils de visualisation pour le web (html5, WebGL ...).
-                            </span></p>
-        </div>
+					<BR />
+					<p style="text-align: justify;">
+					<b>Touchez les cercles pour obtenir plus d'information!</b>
+                    </p>
 	</div>
-	<div id="divAbout" style="display:none;">
-				<h1 style="font-family:magnetoFont;font-size:20px;">&Agrave; propos de ce site</h1>
+	<div id="divB" style="display:none;">
+				<h1 style="font-family:magnetoFont;font-size:20px;"> Président, directeur général - Explorai</h1>
+					<blockquote><a href="https://explor.ai/en">explor.ai</a></blockquote>
+				
+	</div>
+	<div id="divC" style="display:none;">
+				<h1 style="font-family:magnetoFont;font-size:20px;">Biron - BiogeniQ</h1>
+	</div>
+
+	<div id="divC1" style="display:none;">
+		<h1 style="font-family:magnetoFont;font-size:20px;">Expert I.A. - Biron</h1>
+			<p style="text-align: justify;">
+				Création, optimisation et déploiement de modèles d'apprentissage machine.
+			</p>
+</div>
+	<div id="divC2" style="display:none;">
+				<h1 style="font-family:magnetoFont;font-size:20px;">Directeur des Données - Biron</h1>
+					<p style="text-align: justify;">
+						Moderniser la gouvernance de l’information, valoriser les actifs informationnels (principalement les données de l’entreprise) et démontrer la valeur de l’information aux parties prenantes de l’organisation.
+					</p>
+	</div>
+	<div id="divC3" style="display:none;">
+				<h1 style="font-family:magnetoFont;font-size:20px;">Directeur des Technologies - BiogeniQ</h1>
+					<p style="text-align: justify;">
+						• Création d'outils innovateur pour le stockage, le traitement et l'affichage de données génétiques<BR />
+• Modélisation des outils et processus opérationnels<BR />
+• Architecture et choix technologiques<BR />
+• Développement de partenariats stratégiques<BR />
+• R&D : Architecture des systèmes, portails d'accès web, APIs, présentations de données génétiques, sécurité<BR />
+• Fonds de recherches, SREDs, bourses<BR />
+					</p>
+	</div>
+	<div id="divD" style="display:none;">
+				<h1 style="font-family:magnetoFont;font-size:20px;">Bio-informaticien - IRIC (Université de Montréal)</h1>
+					<p style="text-align: justify;">
+						Développement logiciel, analyse de données :<BR />
+• Protéomique, proteogenomique, immunoinformatique, spectrométrie de masse<BR />
+• Bases de données NoSQL (Graph, Neo4j, stockage clé-valeur)<BR />
+• Apprentissage machine<BR />
+• Visualisation de données (Python, D3.js)<BR />
+					</p>
+	</div>
+	<div id="divE" style="display:none;">
+				<h1 style="font-family:magnetoFont;font-size:20px;">Précédemment</h1>
+					<p style="text-align: justify;">
+						CRIM, 123 Certification, NOVIKA 
+					</p>
+	</div>
+	<div id="divE1" style="display:none;">
+				<h1 style="font-family:magnetoFont;font-size:20px;">Directeur des Opérations - 123 Certification</h1>
+					<p style="text-align: justify;">
+						Directeur des opérations<BR />
+• Gestion des priorités, mise en place de techniques de gestion efficaces, embauche, production de rapports d'avancement<BR />
+<BR />
+Gestionnaire de projet<BR />
+• Développement d'un simulateur de procédés manuel de soudage (réalité virtuelle, capture de mouvement)<BR />
+• Supervision d'une équipe multidisciplinaire de 15 personnes<BR />
+• Gestion des infrastructures TI et choix technologiques<BR />
+<BR />
+Analyste programmeur - Java<BR />
+• Mise en place de l'architecture du logiciel de simulation de soudage<BR />
+• Développement d'un système de capture de mouvement<BR />
+• Création d'effets spéciaux (fumée, fusion de métal, étincelles)<BR />
+					</p>
+	</div>
+
+
+<div id="divE2" style="display:none;">
+	<h1 style="font-family:magnetoFont;font-size:20px;">Analyste Programmeur - CRIM</h1>
+	<p style="text-align: justify;"></p>
+	• Création d’un programme de correction en temps réel de distorsions issues d’une capture vidéo faite avec une lentille de type «pin-hole»<BR />
+    <BR />
+• Conception d’un logiciel de segmentation de lésions dans des images de fluorescence de très hautes résolutions<BR />
+<BR />
+• Construction d’un logiciel d’analyse de vidéo permettant la reconnaissance de visages, la détection des changements de scène et la sélection automatique d'images clées<BR />
+		</p>
+</div>
+<div id="divE3" style="display:none;">
+			<h1 style="font-family:magnetoFont;font-size:20px;">Programmeur - NOVIKA</h1>
+			<p style="text-align: justify;"></p>
+			• Création d’un logiciel de visualisation et d'édition des nœuds d’un réseau LonWorks de Echelon
+				</p>
+</div>
+		<div id="divF" style="display:none;">
+				<h1 style="font-family:magnetoFont;font-size:20px;">Directeur des Technologies / Co-fondateur - Gradsters</h1>
+					<p style="text-align: justify;">
+						Startup visant la création d'un réseau de chercheur et d'un moteur de recherche pour simplifier la recherche de projets pour les futures gradués.
+					</p>
+		</div>
+	<div id="divG" style="display:none;">
+				<h1 style="font-family:magnetoFont;font-size:20px;">Consultant - Toptal</h1>
 				<p style="text-align: justify;">
-				Cette page a &eacute;t&eacute; cr&eacute;&eacute;e par <a href="http://www.linkedin.com/pub/olivier-caron-lizotte/2b/393/403" target="_blank"><strong>Olivier Caron-Lizotte</strong></a>. Les technologies ayant rendu ce site possible : html5, D3.js and jQuery.</p>
-				<br>
-				<p style="text-align: center; ">
-					<a href="http://en.wikipedia.org/wiki/HTML5" target="_blank"><img alt="" src="images/html5.png" style="width: 36px; height: 36px; " /></a>&nbsp; <a href="http://jquery.com/" target="_blank"><img alt="http://jquery.com/" src="images/jQuery.png" style="width: 147px; height: 36px; " /></a>&nbsp; <a href="http://d3js.org/" target="_blank"><b style="color: rgb(0, 0, 0); font-family: 'Helvetica Neue', Helvetica, sans-serif; line-height: 24px; font-size: medium; ">D3.js</b></a>
-					</p>
-	</div>
-	<div id="divBigData" style="display:none;">
-				<h1 style="font-family:magnetoFont;font-size:20px;">Big Data</h1>
-					<p style="text-align: justify;">
-					OCL Technologies peut extraire de l'information concise &agrave; partir de jeux de donn&eacute;es larges et complexes. Si vos projets ne portent pas sur la bio-informatique, nous pouvons tout de m&ecirc;me vous aider. <a href="mailto:info@ocltech.ca">Contactez-nous</a> pour plus d'informations.
-					</p>
-	</div>
-	<div id="divBioInfo" style="display:none;">
-				<h1 style="font-family:magnetoFont;font-size:20px;">Bio-Informatique</h1>
-					<p style="text-align: justify;">
-					Traitement de donn&eacute;es &agrave; partir de logiciels existants, d&eacute;veloppement d'outils logiciel personnalis&eacute;s, production de preuves de concept, implantation d'algorithmes, cr&eacute;ation d'interfaces originaux... Si vous ou votre compagnie avez des besoins de ce type, nous pouvons vous aider!</p>
-	</div>
-	<div id="divHardware" style="display:none;">
-				<h1 style="font-family:magnetoFont;font-size:20px;">&Eacute;valuation mat&eacute;rielle</h1>
-					<p style="text-align: justify;">
-					Vous pensez avoir besoin de nouvelles infrastructures pour vos calculs? Faites affaire avec nous avant d'aller plus loin!
-					</p>
-					<BR>
-					<p style="text-align: justify;">
-					Nous pouvons &eacute;valuer vos besoins et vous faire des propositions avantageuses. Nous n'avons pas d'affiliation, nos solutions sont donc impartiales.</p>
-	</div>
-	<div id="divGraphDB" style="display:none;">
-				<h1 style="font-family:magnetoFont;font-size:20px;">NoSQL</h1>
-					<p style="text-align: justify;">
-					Les bases de donn&eacute;es SQL ne sont plus toujours adapt&eacute;es &agrave; chaque aspect d'un projet. Parfois, une base de donn&eacute;es NoSQL permet de simplifier le d&eacute;veloppement tout en demeurant &eacute;volutive.</p>
-	</div>
-	<div id="divQuote" style="display:none;">
-				<h1 style="font-family:magnetoFont;font-size:20px;">Contact</h1>
-					<p style="font-weight:600;font-size:15px;">
-					Montréal, Qu&eacute;bec, Canada
-					<br>
-					Par courriel: <a href="mailto:info@ocltech.ca">info@ocltech.ca</a> 
-					<br>
-					Profil LinkedIn: <a href="http://www.linkedin.com/pub/olivier-caron-lizotte/2b/393/403" target="_blank">Olivier Caron-Lizotte</a>
-					</p>
-	</div>
-	<div id="divDataVisual" style="display:none;">
-				<h1 style="font-family:magnetoFont;font-size:20px;">Visualisation</h1>
-				<p style="text-align: justify;">
-				OCL Technologies construit des repr&eacute;sentations visuelles cr&eacute;atives en HTML5, par l'utilisation de diverses librairies: D3.js, Raphael.js, Ext JS, Processing.js, Jmol et plusieurs autres. Chaque outil construit est original.</p>
+				<a href="https://www.toptal.com/resume/olivier-caron-lizotte">Profile publique Toptal</a>
+				</p>
 	</div>
 <BR>
-<div id="hideWindow"><span onclick="HideWindow(); return false;"> --- cacher --- </span></div>
+<div id="hideWindow"><span onclick="HideWindow(); return false;"> --- hide --- </span></div>
 </div>
 </div>
 </div>
 
-<script type="text/javascript">
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
 
 if(isCanvasSupported())
 {
@@ -238,7 +286,6 @@ if(isCanvasSupported())
 	CreateGraph(dataObject, "graph", OnNodeClick);
 
 	OnNodeClick(GetFirstNode());
-
 	//Send a nice little message to the user about how to navigate in this site
 	//MessageTop.msg("Navigation", "Click or drag the circles to navigate through the site");
 }
@@ -250,7 +297,7 @@ else
 	document.getElementById('hiddenDiv').style.display="block";
 }
 </script>
-<div id='language'><div id='languageInside' class="box-shadow" onclick="location.href='index.html'" onmouseover="" style="cursor: pointer;">English</div></div>
+<div id='language'><div id='languageInside' class="box-shadow" onclick="location.href='index_fr.html'" onmouseover="" style="cursor: pointer;">Fran&ccedil;ais</div></div>
 </body>
 
 </html>
